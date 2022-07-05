@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "239828503303",
+    "project_id": "auction-e9bad",
+    "storage_bucket": "auction-e9bad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239828503303:android:4ebe813af703dafe7393a2",
+        "android_client_info": {
+          "package_name": "com.example.auction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239828503303-8ttofao7hevmqiaboivaidjac816nthg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.auction",
+            "certificate_hash": "4726fb538f9f8b403d18556003b49dfaccdc1936"
+          }
+        },
+        {
+          "client_id": "239828503303-0c4k9rpi02g093cosj48jl33u8in39h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChuj9X0T8PMDH-oA7TcTx5gKN5W-f77r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239828503303-0c4k9rpi02g093cosj48jl33u8in39h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
