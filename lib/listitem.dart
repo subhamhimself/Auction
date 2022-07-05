@@ -10,6 +10,8 @@
 //  final String sellerEmail;
 //  final DateTime date;
 //  final String bidderEmail;
+
+
 //  final int bidPrice;
 
 //  const ListItemWidget({Key? key, required this.id ,required this.title,required this.sellerEmail,required this.description,required this.imageURL,required this.date, required this.bidPrice ,required this.bidderEmail}) : super(key: key);
