@@ -1,13 +1,10 @@
-// ignore_for_file: unused_import
-
+import 'package:auction/additem.dart';
 import 'package:auction/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'present.dart';
 import 'package:firebase_core/firebase_core.dart';
-// import 'past.dart';
 import 'login.dart';
 import 'mainpage.dart';
-// import 'coming.dart';
 
 bool confirm = false;
 
@@ -30,6 +27,8 @@ class MyApp extends StatelessWidget {
             '/mainpage':(context) => const MainPage(),
             '/login':(context) => const LoginWidget(),
             '/home': (context) => const Home(),
+            '/additem': (context) => const AddItem(),
+            // '/itempage':(context)=> const ItemPage(),
           },
 
     );
