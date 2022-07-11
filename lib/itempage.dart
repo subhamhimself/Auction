@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,12 @@ String sellerEmail2 = "huehuehue@hue.hue";
 DateTime date2 = DateTime.now();
 String bidderEmail2 = "hehe??@bidder.com";
 int bidPrice2 = 100;
+void add() {
+  FirebaseFirestore.instance.collection('items').doc(id2).update({
+    'bidPrice': bidPrice2,
+    'bidderEmail': FirebaseAuth.instance.currentUser!.email
+  });
+}
 
 class ItemPage extends StatefulWidget {
   const ItemPage({Key? key}) : super(key: key);
@@ -80,25 +87,26 @@ class _ItemPageState extends State<ItemPage> {
                         bidderEmail2 =
                             FirebaseAuth.instance.currentUser!.email!;
                       });
+                      add();
                     },
                     child: const Text("+100")),
                 ElevatedButton(
                     onPressed: () {
-                      print(FirebaseAuth.instance.currentUser?.email);
-
                       setState(() {
-                        bidPrice2 += 100;
+                        bidPrice2 += 200;
                         bidderEmail2 =
                             FirebaseAuth.instance.currentUser!.email!;
+                        add();
                       });
                     },
                     child: const Text("+200")),
                 ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        bidPrice2 += 100;
+                        bidPrice2 += 500;
                         bidderEmail2 =
                             FirebaseAuth.instance.currentUser!.email!;
+                        add();
                       });
                     },
                     child: const Text("+500")),
