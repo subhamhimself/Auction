@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Demo'),
+        title: const Text('Auction'),
       ),
       drawer: const NavDrawer(),
       floatingActionButton: FloatingActionButton(
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
           child: const Icon(Icons.add)),
       body: StreamBuilder(
         stream:
-            Stream.periodic(const Duration(seconds: 0)).asyncMap((event) async {
+            Stream.periodic(const Duration(seconds: 50)).asyncMap((event) async {
           QuerySnapshot toRtnSnapshot;
           if(index==0)
            toRtnSnapshot = await FirebaseFirestore.instance

@@ -5,7 +5,7 @@ import 'present.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'login.dart';
 import 'mainpage.dart';
-
+import 'itempage.dart';
 bool confirm = false;
 
 Future<void> main() async {
@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: Present(),
-      // home: MainPage(),
+      // home: const Home(),
+      // home: const ItemPage(),
       initialRoute: '/mainpage',
           routes: {
             '/mainpage':(context) => const MainPage(),

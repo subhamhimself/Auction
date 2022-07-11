@@ -29,40 +29,42 @@ class _NavDrawerState extends State<NavDrawer> {
 
   @override
   Widget build(BuildContext context) {
+    String? email = FirebaseAuth.instance.currentUser!.email;
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const DrawerHeader(
+           DrawerHeader(
             // ignore: sort_child_properties_last
             child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              'Welcome $email',
+              style: const TextStyle(color: Colors.white, fontSize: 25),
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.blue,
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.input),
-            title: const Text('Welcome'),
-            onTap: () => {},
-          ),
-          ListTile(
-            leading: const Icon(Icons.verified_user),
-            title: const Text('Profile'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: const Icon(Icons.border_color),
-            title: const Text('Feedback'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
+          // ListTile(
+          //   // leading: const Icon(Icons.input),
+          //   title: Text('Welcome $email',
+          //   style: TextStyle(fontSize: 24),),
+          //   onTap: () => {},
+          // ),
+          // ListTile(
+          //   leading: const Icon(Icons.verified_user),
+          //   title: const Text('Profile'),
+          //   onTap: () => {Navigator.of(context).pop()},
+          // ),
+          // ListTile(
+          //   leading: const Icon(Icons.settings),
+          //   title: const Text('Settings'),
+          //   onTap: () => {Navigator.of(context).pop()},
+          // ),
+          // ListTile(
+          //   leading: const Icon(Icons.border_color),
+          //   title: const Text('Feedback'),
+          //   onTap: () => {Navigator.of(context).pop()},
+          // ),
           ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Logout'),
