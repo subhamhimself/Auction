@@ -69,7 +69,7 @@ class _AddItemState extends State<AddItem> {
           // height: 400,
           );
     } else {
-      x = Image.file(File(sampleImage!.path),height: 150,);
+      x = Image.file(File(sampleImage!.path),height: 100,);
     }
     return Scaffold(
         appBar: AppBar(
